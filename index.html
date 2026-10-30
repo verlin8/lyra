@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VERLIN SMM - Suntik Sosmed Murah</title>
+<style>
+*{box-sizing:border-box;font-family:Arial}
+body{margin:0;background:#0a0a14;color:#fff}
+.hero{background:linear-gradient(135deg,#ff006a,#7000ff);padding:35px 20px;text-align:center}
+.hero h1{margin:0;font-size:30px;font-weight:900;line-height:1.1}
+.hero p{margin:8px 0 0;opacity:0.8}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:15px}
+.card{background:#151525;border:1px solid #22223a;border-radius:16px;padding:14px;text-align:center}
+.card b{display:block;margin:6px 0 3px}
+.price{color:#00ff88;font-weight:bold;font-size:13px;margin:5px 0}
+.btn-order{padding:6px 14px;border:none;border-radius:20px;background:#fff;color:#000;font-weight:bold;font-size:11px;cursor:pointer}
+.box{background:#151525;border-radius:18px;padding:18px;margin:15px;border:1px solid #22223a}
+input,select{width:100%;padding:13px;border-radius:12px;border:1px solid #333;background:#0a0a14;color:#fff;margin:6px 0}
+.btn{width:100%;padding:15px;border:none;border-radius:12px;font-weight:900;font-size:15px;cursor:pointer}
+.btn-pink{background:linear-gradient(90deg,#ff006a,#7000ff);color:#fff}
+.btn-wa{background:#25D366;color:#fff;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>SUNTIK SOSMED<br>MURAH</h1>
+<p>🚀 Panel Resmi Verlin • Proses 1 Menit • Garansi</p>
+<p style="font-size:12px;background:rgba(255,255,255,0.2);display:inline-block;padding:5px 12px;border-radius:20px">WA: 0878-1185-4174</p>
+</div>
+
+<div class="grid">
+<div class="card">❤️<b>IG Followers<br>Indonesia</b><div class="price">Rp 15k / 1000</div><button class="btn-order" onclick="pilih('IG Followers Indonesia - Rp 15k/1k')">Pilih</button></div>
+<div class="card">👍<b>IG Likes<br>Real</b><div class="price">Rp 5k / 1000</div><button class="btn-order" onclick="pilih('IG Likes - Rp 5k/1k')">Pilih</button></div>
+<div class="card">🎵<b>TikTok<br>Followers</b><div class="price">Rp 20k / 1000</div><button class="btn-order" onclick="pilih('TikTok Followers - Rp 20k/1k')">Pilih</button></div>
+<div class="card">👁️<b>TikTok<br>Views</b><div class="price">Rp 3k / 10k</div><button class="btn-order" onclick="pilih('TikTok Views - Rp 3k/10k')">Pilih</button></div>
+<div class="card">▶️<b>YT<br>Subscribers</b><div class="price">Rp 35k / 1000</div><button class="btn-order" onclick="pilih('YT Subs - Rp 35k/1k')">Pilih</button></div>
+<div class="card">▶️<b>YT Views<br>High Quality</b><div class="price">Rp 15k / 1000</div><button class="btn-order" onclick="pilih('YT Views - Rp 15k/1k')">Pilih</button></div>
+</div>
+
+<div class="box">
+<h3 style="margin:0 0 10px">🛒 Order Panel Verlin</h3>
+<input id="user" placeholder="Username target (tanpa @)">
+<select id="layanan">
+<option>Pilih layanan dulu...</option>
+<option>IG Followers Indonesia - Rp 15k/1k</option>
+<option>IG Likes - Rp 5k/1k</option>
+<option>TikTok Followers - Rp 20k/1k</option>
+<option>TikTok Views - Rp 3k/10k</option>
+<option>YT Subs - Rp 35k/1k</option>
+<option>YT Views - Rp 15k/1k</option>
+</select>
+<button class="btn btn-pink" onclick="order()">ORDER SEKARANG - 0878-1185-4174</button>
+<button class="btn btn-wa" onclick="chat()">💬 TANYA ADMIN DULU</button>
+<p style="text-align:center;font-size:10px;opacity:0.5;margin-top:10px">Pembayaran: Dana / Ovo / QRIS • Buka 24 Jam</p>
+</div>
+
+<script>
+const NO="6287811854174";
+function pilih(n){document.getElementById('layanan').value=n;window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})}
+function order(){
+let u=document.getElementById('user').value;
+let l=document.getElementById('layanan').value;
+if(!u||l.includes('Pilih')){alert('Isi username & pilih layanan!');return}
+let text=`Halo Kak Verlin! Mau order SMM:%0A%0ALayanan: ${l}%0AUsername: @${u}%0A%0ACek harga ya kak!`;
+window.open(`https://wa.me/${NO}?text=${text}`,'_blank');
+}
+function chat(){window.open(`https://wa.me/${NO}?text=Halo Kak Verlin mau tanya harga panel`,'_blank')}
+</script>
+</body>
+</html>
